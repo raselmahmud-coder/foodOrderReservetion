@@ -1,31 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/ASF_logo.png";
+import bgPattern from "../../assets/Pattern.png";
+
 
 const NavBar = () => {
-  const commonLi = <>
-   <li>
-              <a>Home</a>
-            </li>
+  const commonLi = (
+    <>
+      <li>
+        <Link to={"/"}>Home</Link>
+      </li>
 
-            <li>
-              <a>Catering</a>
-            </li>
-            <li>
-              <a>Private Dining</a>
-            </li>
-            <li>
-              <a>Careers</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a className="btn btn-primary text-[#3c5b50]">View Menu</a>
-            </li>
-  </>
+      <li>
+        <Link to={"/catering"}>Catering</Link>
+      </li>
+      <li>
+        <Link to="/private-dining">Private Dining</Link>
+      </li>
+      <li>
+        <Link to="/careers">Careers</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <button className="btn btn-primary text-[#3c5b50]">View Menu</button>
+      </li>
+    </>
+  );
   return (
     <>
-      <div className="navbar bg-transparent pt-5">
+      <nav
+        className="navbar py-5">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,22 +52,20 @@ const NavBar = () => {
             <ul
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-          {commonLi}
+              {commonLi}
             </ul>
           </div>
           <img src={logo} alt="" className="h-10 hidden lg:block" />
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-secondary">
-          {commonLi}
+            {commonLi}
           </ul>
         </div>
         <div className="navbar-end lg:hidden">
-        <img src={logo} alt="" className="h-10" />
+          <img src={logo} alt="" className="h-10" />
         </div>
-      </div>
-
-    
+      </nav>
     </>
   );
 };

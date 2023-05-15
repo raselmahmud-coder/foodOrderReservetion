@@ -2,21 +2,20 @@ import React from "react";
 import HomePage from "./pages/HomePage";
 import FooterSection from "./components/ShareComponents/FooterSection";
 import ErrorPage from "./components/ShareComponents/ErrorPage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-    errorElement: <ErrorPage />,
-  },
-]);
+import CateringPage from "./pages/CateringPage";
+import { Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <>
-        <RouterProvider router={router} />
-      
-      
-      <FooterSection/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catering" element={<CateringPage />} />
+
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+
+      <FooterSection />
     </>
   );
 }
