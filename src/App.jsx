@@ -11,9 +11,8 @@ function App() {
       <div
         style={{
           backgroundImage: `url(${bgPattern})`,
-          // backgroundSize: "cover",
           width: "100%",
-          height: "4400px",
+          height: "7000px",
           position: "absolute",
           top: "0",
           zIndex: "-1",

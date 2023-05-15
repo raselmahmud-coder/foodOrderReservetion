@@ -3,6 +3,7 @@ import NavBar from "../components/HomePageComponents/NavBar";
 import SwiperCarousel from "../components/HomePageComponents/Carousel/SwiperCarousel";
 import ProductShowcase from "../components/HomePageComponents/ProductShowcase";
 import MakeReservation from "../components/HomePageComponents/MakeReservation";
+import CallToAction from "../components/HomePageComponents/CallToAction";
 const HomePage = () => {
   return (
     <>
@@ -11,7 +12,8 @@ const HomePage = () => {
           <SwiperCarousel/>
       </div>
       <ProductShowcase />
-      <MakeReservation/>
+      <MakeReservation />
+      <CallToAction/>
     </>
   );
 };
