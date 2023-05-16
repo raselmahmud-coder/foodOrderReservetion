@@ -3,12 +3,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 // Import Swiper styles
-import "./SwiperCarousel.css";
+import "./CateringSwiperCarousel.css";
 import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const SwiperCarousel = () => {
+const CateringSwiperCarousel = () => {
   return (
     <>
       <Swiper
@@ -18,11 +18,11 @@ const SwiperCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
+        navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         centeredSlides={true}
         className="">
@@ -48,6 +48,7 @@ const SwiperCarousel = () => {
           <img
             src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/1681442263532-PV8VNLLNRY6HMLQCELED/Adas+Polo+-+Cocktail.jpg?format=2500w"
             className="w-full rounded-xl"
+            
           />
         </SwiperSlide>
       </Swiper>
@@ -55,4 +56,4 @@ const SwiperCarousel = () => {
   );
 };
 
-export default SwiperCarousel;
+export default CateringSwiperCarousel;
