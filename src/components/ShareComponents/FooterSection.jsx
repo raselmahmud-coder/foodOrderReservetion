@@ -3,11 +3,10 @@ import React from "react";
 const FooterSection = () => {
   return (
     <section
-      className="py-20"
+      className="pt-20"
       style={{
         backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/365c6c65-10bd-4ad8-9924-5eebc08cd484/footerbg.jpg)`,
         width: "100%",
-        height: "400px",
         zIndex: "-1",
       }}>
       <hr className="border-t-2 w-10/12 mx-auto" />
@@ -70,7 +69,7 @@ const FooterSection = () => {
         </div>
         <div>
           <span className="footer-title text-gray-100 text-2xl opacity-100">
-          JOIN OUR MAILING LIST
+            JOIN OUR MAILING LIST
           </span>
           <div className="form-control w-80">
             <label className="label">
@@ -91,6 +90,18 @@ const FooterSection = () => {
           </div>
         </div>
       </footer>
+      <div className="text-gray-100 container mx-auto pt-5 pb-1">
+        <h6 className="text-center">
+          Copyright &copy; 2023 - {new Date().getFullYear()} - Develop by{" "}
+          <a
+            className="text-yellow-200"
+            href="https://programming-dude.com/founder/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Programming-Dude
+          </a>{" "}
+        </h6>
+      </div>
     </section>
   );
 };

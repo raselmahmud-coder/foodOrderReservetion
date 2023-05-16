@@ -5,6 +5,7 @@ import ErrorPage from "./components/ShareComponents/ErrorPage";
 import EvenCoOrdinatorPage from "./pages/EvenCoOrdinatorPage";
 import { Route, Routes } from "react-router-dom";
 import CateringPage from "./pages/CateringPage";
+import PrivateEventPage from "./pages/PrivateEventPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/careers" element={<EvenCoOrdinatorPage />} />
         <Route path="/catering" element={<CateringPage />} />
+        <Route path="/private-dining" element={<PrivateEventPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
