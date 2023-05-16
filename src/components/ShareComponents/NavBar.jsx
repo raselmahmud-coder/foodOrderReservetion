@@ -1,27 +1,55 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/ASF_logo.png";
-import bgPattern from "../../assets/Pattern.png";
-
 
 const NavBar = () => {
   const commonLi = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to={"/"}>
+          Home
+        </NavLink>
       </li>
 
       <li>
-        <Link to={"/catering"}>Catering</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to={"/catering"}>
+          Catering
+        </NavLink>
       </li>
       <li>
-        <Link to="/private-dining">Private Dining</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to="/private-dining">
+          Private Dining
+        </NavLink>
       </li>
       <li>
-        <Link to="/careers">Careers</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to="/careers">
+          Careers
+        </NavLink>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to="/about">
+          About
+        </NavLink>
       </li>
       <li>
         <button className="btn btn-primary text-[#3c5b50]">View Menu</button>
@@ -30,8 +58,7 @@ const NavBar = () => {
   );
   return (
     <>
-      <nav
-        className="navbar py-5">
+      <nav className="navbar py-5" id="backToTop">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,10 +79,13 @@ const NavBar = () => {
             <ul
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              {/* this menu for mobile */}
               {commonLi}
             </ul>
           </div>
-          <img src={logo} alt="" className="h-10 hidden lg:block" />
+          <Link to="/">
+            <img src={logo} alt="" className="h-10 hidden lg:block" />
+          </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-secondary">
@@ -63,7 +93,9 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end lg:hidden">
-          <img src={logo} alt="" className="h-10" />
+          <Link to="/">
+            <img src={logo} alt="" className="h-10" />
+          </Link>
         </div>
       </nav>
     </>

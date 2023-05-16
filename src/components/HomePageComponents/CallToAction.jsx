@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <>
-      <h1 className="text-5xl text-gray-100 text-center">
+    <section >
+      <h1 className="lg:text-5xl text-3xl text-gray-100 text-center">
         Celebrate your special occasion at African Soul Food
       </h1>
-      <h2 className="text-4xl text-gray-100 text-center my-12">
+      <h2 className="lg:text-4xl text-xl text-gray-100 text-center my-12">
         For Reservations:{" "}
         <a
           className="text-red-500 border-b-2 border-red-500"
@@ -29,11 +29,11 @@ const CallToAction = () => {
         <br />
         Atlanta, GA 30307
       </p>
-      <div className="grid lg:grid-cols-3 gap-3 items-center">
+      <div className="grid lg:grid-cols-3 gap-3 items-center justify-center">
         <img
           src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/c5a4a396-0b85-4f33-9e78-a08d54f53f98/mamoni.png?format=300w"
           alt=""
-          className="w-full justify-center"
+          className="lg:w-full mx-auto w-1/2 lg:my-0 my-5"
         />
         <div>
           <div className="my-5">
@@ -81,10 +81,10 @@ const CallToAction = () => {
         <img
           src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/97e6ee7e-c17d-4a4f-a4bd-ef65240d9a78/tas4.png?format=500w"
           alt=""
-          className="w-full justify-center"
+          className="lg:w-full mx-auto w-1/2 lg:my-0 my-5"
         />
       </div>
-    </>
+    </section>
   );
 };
 

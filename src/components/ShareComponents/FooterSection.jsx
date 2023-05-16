@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FooterSection = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  window.addEventListener("scroll", getScrollValue)
+  function getScrollValue() {
+    setShowBackToTop(window.scrollY);
+  };
+
+
   return (
     <section
-      className="pt-20"
+      className="pt-20 -mt-[88px]"
       style={{
         backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/365c6c65-10bd-4ad8-9924-5eebc08cd484/footerbg.jpg)`,
         width: "100%",
@@ -99,9 +106,24 @@ const FooterSection = () => {
             target="_blank"
             rel="noopener noreferrer">
             Programming-Dude
-          </a>{" "}
+          </a>
         </h6>
       </div>
+      {/* Back to Top */}
+      {showBackToTop >150 && (
+        <button
+          style={{ zIndex: "999" }}
+          className="bg-red-600 inline fixed p-3 rounded-[50px] bottom-2 right-2">
+          <a href="#backToTop">
+            <img
+              style={{ zIndex: "999" }}
+              src="https://em-content.zobj.net/source/skype/289/rocket_1f680.png"
+              alt=""
+              className="w-12 h-12 rounded"
+            />
+          </a>
+        </button>
+      )}
     </section>
   );
 };

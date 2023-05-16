@@ -27,12 +27,12 @@ const CateringMenu = () => {
           <img
             src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/8473ba96-7552-4071-93c5-61cf1074310b/kookoo+sabzi.jpg?format=1000w"
             alt=""
-            className="w-full lg:h-[75%] h-[50%]"
+            className="w-full"
           />
           <img
             src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/8473ba96-7552-4071-93c5-61cf1074310b/kookoo+sabzi.jpg?format=1000w"
             alt=""
-            className="w-full lg:h-[75%] h-[50%]"
+            className="w-full"
           />
         </div>
       </section>

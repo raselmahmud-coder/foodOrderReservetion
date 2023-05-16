@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 const SwiperCarousel = () => {
   return (
-    <>
+    <section className="py-20">
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
@@ -51,7 +51,7 @@ const SwiperCarousel = () => {
           />
         </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 };
 

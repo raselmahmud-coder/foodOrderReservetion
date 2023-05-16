@@ -4,7 +4,7 @@ const PrivateEventDining = () => {
   return (
     <>
       <section className="py-12">
-        <h1 className="text-7xl text-center text-gray-100">
+        <h1 className="text-7xl text-center text-gray-100 pt-20">
           Private Event
         </h1>
         <h2 className="lg:text-5xl text-3xl text-center text-gray-100 uppercase pt-12">

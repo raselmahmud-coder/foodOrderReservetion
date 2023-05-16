@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 const CateringSwiperCarousel = () => {
   return (
-    <>
+    <section className="pt-40 pb-12">
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
@@ -52,7 +52,7 @@ const CateringSwiperCarousel = () => {
           />
         </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 };
 

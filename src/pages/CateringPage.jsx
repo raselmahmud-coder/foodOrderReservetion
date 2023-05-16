@@ -1,6 +1,5 @@
 import React from "react";
 import CateringSwiperCarousel from "../components/CateringComponents/CateringCarousel/CateringSwiperCarousel";
-import NavBar from "../components/ShareComponents/NavBar";
 import Pattern from "../assets/Pattern.png";
 import CateringMenu from "../components/CateringComponents/CateringMenu";
 
@@ -11,15 +10,13 @@ const CateringPage = () => {
         style={{
           backgroundImage: `url(${Pattern})`,
           width: "100%",
-          height: "360vh",
           zIndex: "-1",
+          position: "relative",
+          top: "-88px",
         }}>
         <div className="container mx-auto">
-          <NavBar />
-          <div className="my-12">
           <CateringSwiperCarousel />
-          </div>
-          <CateringMenu/>
+          <CateringMenu />
         </div>
       </section>
     </>

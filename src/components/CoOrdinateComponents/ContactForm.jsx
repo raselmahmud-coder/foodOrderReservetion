@@ -1,16 +1,15 @@
 import React from "react";
-import bgPattern from "../../assets/Pattern.png";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div className="py-12">
       <h1 className="text-5xl text-center text-gray-100 pt-12">
         Get in touch with our Event Coordinator
       </h1>
       <h1 className="text-3xl text-center text-gray-100 py-12">
         African Soul Food AT YOUR SERVICE
       </h1>
-      <form action="" className="w-1/2 mx-auto">
+      <form action="" className="lg:w-1/2 w-full lg:p-1 p-2 mx-auto">
         <div className="flex gap-2 my-1">
           <div className="form-control w-full max-w-xs">
             <label className="label">
@@ -80,7 +79,7 @@ const ContactForm = () => {
             </label>
             <input
               type="checkbox"
-              checked
+              // checked
               className="checkbox checkbox-primary"
             />
           </div>
@@ -93,9 +92,6 @@ const ContactForm = () => {
               </span>
             </label>
             <select className="select">
-              <option disabled selected>
-                Pick your favorite Service
-              </option>
               <option>On-Premise</option>
               <option>Drop-Off Catering</option>
               <option>Pick-Up Catering</option>

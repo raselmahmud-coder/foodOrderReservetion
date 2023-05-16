@@ -9,13 +9,11 @@ const EvenCoOrdinatorPage = () => {
       style={{
         backgroundImage: `url(${Pattern})`,
         width: "100%",
-        height: "360vh",
         zIndex: "-1",
+        marginTop: "-88px",
       }}>
-          <div className="container mx-auto">
-      <NavBar />
-      <ContactForm />
-              
+      <div className="container mx-auto py-24">
+        <ContactForm />
       </div>
     </section>
   );
