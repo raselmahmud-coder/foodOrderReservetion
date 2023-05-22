@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Map from "./Map";
 
 const FooterSection = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -16,8 +17,9 @@ const FooterSection = () => {
         width: "100%",
         zIndex: "-1",
       }}>
-      <hr className="border-t-2 w-10/12 mx-auto" />
+      <hr className="border-t-2 w-10/12 mx-auto py-5" />
 
+      <Map/>
       <footer className="footer bg-transparent p-10 text-gray-100 container mx-auto">
         <div>
           <span className="footer-title text-gray-100 text-2xl opacity-100">
