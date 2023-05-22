@@ -1,9 +1,10 @@
 import React from "react";
 import ContactForm from "../components/CoOrdinateComponents/ContactForm";
 import Pattern from "../assets/Pattern.png";
-import NavBar from "../components/ShareComponents/NavBar";
+import usePageTitle from "../Hooks/usePageTitle";
 
 const EvenCoOrdinatorPage = () => {
+  usePageTitle("Event Coordinator Page");
   return (
     <section
       style={{

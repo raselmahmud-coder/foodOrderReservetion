@@ -2,8 +2,11 @@ import React from "react";
 import CateringSwiperCarousel from "../components/CateringComponents/CateringCarousel/CateringSwiperCarousel";
 import Pattern from "../assets/Pattern.png";
 import CateringMenu from "../components/CateringComponents/CateringMenu";
+import usePageTitle from "../Hooks/usePageTitle";
 
 const CateringPage = () => {
+  usePageTitle("Catering Page");
+
   return (
     <>
       <section
@@ -11,8 +14,7 @@ const CateringPage = () => {
           backgroundImage: `url(${Pattern})`,
           width: "100%",
           zIndex: "-1",
-          position: "relative",
-          top: "-88px",
+          marginTop: "-88px",
         }}>
         <div className="container mx-auto">
           <CateringSwiperCarousel />

@@ -52,7 +52,9 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li>
-        <button className="btn btn-primary text-[#3c5b50]">View Menu</button>
+        <button className="btn btn-primary active:text-gray-100">
+          View Menu
+        </button>
       </li>
     </>
   );

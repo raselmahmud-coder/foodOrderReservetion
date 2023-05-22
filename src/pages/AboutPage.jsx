@@ -1,7 +1,9 @@
 import React from "react";
 import Pattern from "../assets/Pattern.png";
+import usePageTitle from "../Hooks/usePageTitle";
 
 const AboutPage = () => {
+  usePageTitle("About Page");
   return (
     <>
       <section

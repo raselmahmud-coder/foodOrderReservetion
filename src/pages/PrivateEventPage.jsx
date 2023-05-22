@@ -1,8 +1,10 @@
 import React from "react";
 import PrivateEventDining from "../components/CateringComponents/PrivateEventComponents/PrivateEventDining";
 import Pattern from "../assets/Pattern.png";
+import usePageTitle from "../Hooks/usePageTitle";
 
 const PrivateEventPage = () => {
+  usePageTitle("Private Event Page");
   return (
     <>
       <section
@@ -10,8 +12,7 @@ const PrivateEventPage = () => {
           backgroundImage: `url(${Pattern})`,
           width: "100%",
           zIndex: "-1",
-          position: "relative",
-          top: "-88px",
+          marginTop: "-88px",
         }}>
         <div className="container mx-auto">
           <PrivateEventDining />

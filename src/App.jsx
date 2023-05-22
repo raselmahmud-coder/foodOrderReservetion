@@ -19,10 +19,10 @@ function App() {
         <Route path="/catering" element={<CateringPage />} />
         <Route path="/private-dining" element={<PrivateEventPage />} />
         <Route path="/about" element={<AboutPage />} />
-{/* Error Page */}
+        {/* Error Page */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-{/* Footer is separated component */}
+      {/* Footer is separated component */}
       <FooterSection />
     </>
   );
