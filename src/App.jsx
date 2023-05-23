@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import CustomSpinner from "./components/ShareComponents/CustomSpinner";
 import NavBar from "./components/ShareComponents/NavBar";
 import FooterSection from "./components/ShareComponents/FooterSection";
-import FakeNavbar from "./components/ShareComponents/FakeNavbar";
 // Lazy load your page components
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ErrorPage = lazy(() => import("./components/ShareComponents/ErrorPage"));
@@ -16,7 +15,6 @@ function App() {
   return (
     <>
       <NavBar />
-      {/* <FakeNavbar/> */}
       <Suspense fallback={<CustomSpinner />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
