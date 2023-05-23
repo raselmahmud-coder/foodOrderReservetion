@@ -30,7 +30,7 @@ const MakeReservation = () => {
             be blown away by our mothers and grandmothers cooking while enjoying
             the company of our favorite people.
           </p>
-          <button className="btn text-gray-100 btn-lg mt-8">MAKE A RESERVATION</button>
+          <button className="btn hover:animate-pulse text-gray-100 btn-lg mt-8">MAKE A RESERVATION</button>
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-2">
           <img

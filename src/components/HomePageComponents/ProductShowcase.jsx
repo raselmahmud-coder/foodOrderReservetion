@@ -18,10 +18,10 @@ const ProductShowcase = () => {
         the women in his life who instilled his deep appreciation for Middle
         Eastern cooking.
       </p>
-      <button className="btn btn-ghost mx-auto flex underline text-gray-100 text-2xl">
+      <button className="btn hover:animate-bounce btn-ghost mx-auto flex underline text-gray-100 text-2xl">
         CLICK TO VIEW OUR MENU
       </button>
-      <button className="lg:my-22 my-16 btn btn-outline mx-auto flex text-gray-100 btn-md lg:btn-lg btn-wide">
+      <button className="lg:my-22 hover:animate-ping my-16 btn btn-outline mx-auto flex text-gray-100 btn-md lg:btn-lg btn-wide">
         ORDER ONLINE
       </button>
         <img

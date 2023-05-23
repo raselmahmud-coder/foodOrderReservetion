@@ -1,31 +1,37 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CustomSpinner from "./components/ShareComponents/CustomSpinner";
 import NavBar from "./components/ShareComponents/NavBar";
 import FooterSection from "./components/ShareComponents/FooterSection";
-// Lazy load your page components
-const HomePage = lazy(() => import("./pages/HomePage"));
-const ErrorPage = lazy(() => import("./components/ShareComponents/ErrorPage"));
-const EvenCoOrdinatorPage = lazy(() => import("./pages/EvenCoOrdinatorPage"));
-const CateringPage = lazy(() => import("./pages/CateringPage"));
-const PrivateEventPage = lazy(() => import("./pages/PrivateEventPage"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
+// Pages imported
+import HomePage from "./pages/HomePage";
+import ErrorPage from "./components/ShareComponents/ErrorPage";
+import EvenCoOrdinatorPage from "./pages/EvenCoOrdinatorPage";
+import CateringPage from "./pages/CateringPage";
+import PrivateEventPage from "./pages/PrivateEventPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
+  const WrappedHomePage = CustomSpinner(HomePage);
+  const WrappedEvenCoOrdinatorPage = CustomSpinner(EvenCoOrdinatorPage);
+  const WrappedCateringPage = CustomSpinner(CateringPage);
+  const WrappedPrivateEventPage = CustomSpinner(PrivateEventPage);
+  const WrappedAboutPage = CustomSpinner(AboutPage);
+  const WrappedAErrorPage = CustomSpinner(ErrorPage);
   return (
     <>
       <NavBar />
-      <Suspense fallback={<CustomSpinner />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/careers" element={<EvenCoOrdinatorPage />} />
-          <Route path="/catering" element={<CateringPage />} />
-          <Route path="/private-dining" element={<PrivateEventPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          {/* Error Page */}
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Suspense>
+
+      <Routes>
+        <Route path="/" element={<WrappedHomePage />} />
+        <Route path="/careers" element={<WrappedEvenCoOrdinatorPage />} />
+        <Route path="/catering" element={<WrappedCateringPage />} />
+        <Route path="/private-dining" element={<WrappedPrivateEventPage />} />
+        <Route path="/about" element={< WrappedAboutPage/>} />
+        {/* Error Page */}
+        <Route path="*" element={<WrappedAErrorPage />} />
+      </Routes>
+
       {/* Footer is separated component */}
       <FooterSection />
     </>

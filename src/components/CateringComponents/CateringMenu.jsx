@@ -18,9 +18,9 @@ const CateringMenu = () => {
           soon as possible.
         </p>
         <div className="flex gap-6 justify-center my-16">
-          <button className="btn btn-primary">CATERING MENUS</button>
-          <button className="btn btn-primary btn-outline">EZ CATER</button>
-          <button className="btn btn-primary">CATERING INQUIRY</button>
+          <button className="btn hover:animate-bounce btn-primary">CATERING MENUS</button>
+          <button className="btn hover:animate-bounce btn-primary btn-outline">EZ CATER</button>
+          <button className="btn hover:animate-bounce btn-primary">CATERING INQUIRY</button>
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-3 gap-2 items-center p-4">
           

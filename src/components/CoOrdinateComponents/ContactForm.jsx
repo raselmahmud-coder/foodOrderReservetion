@@ -171,7 +171,7 @@ const ContactForm = () => {
               className="textarea w-full "></textarea>
           </div>
         </div>
-        <button className="btn btn-primary btn-lg my-1">Submit</button>
+        <button className="btn hover:animate-pulse btn-primary btn-lg my-1">Submit</button>
       </form>
     </div>
   );

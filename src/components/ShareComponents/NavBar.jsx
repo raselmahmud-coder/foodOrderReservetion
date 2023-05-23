@@ -54,7 +54,7 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li>
-        <button className="btn btn-primary active:text-gray-100">
+        <button className="btn hover:animate-bounce btn-primary active:text-gray-100">
           View Menu
         </button>
       </li>

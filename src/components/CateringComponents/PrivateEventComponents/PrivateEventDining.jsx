@@ -27,8 +27,8 @@ const PrivateEventDining = () => {
           Private Dining
         </h1>
         <div className="flex gap-16 justify-center my-16">
-          <button className="btn btn-primary lg:btn-lg">SET MENUS</button>
-          <button className="btn btn-primary lg:btn-lg">ROOM MINIMUMS</button>
+          <button className="btn hover:animate-bounce btn-primary lg:btn-lg">SET MENUS</button>
+          <button className="btn hover:animate-bounce btn-primary lg:btn-lg">ROOM MINIMUMS</button>
         </div>
         <p className="text-xl text-center text-gray-100 lg:w-[50%] w-[80%] pt-12 mx-auto">
           For more information about a private dinner or group event at African
@@ -36,7 +36,7 @@ const PrivateEventDining = () => {
           form.
         </p>
         <div className="flex gap-16 justify-center my-16">
-          <button className="btn btn-outline outline border-gray-100 text-gray-100 lg:btn-lg">
+          <button className="btn hover:animate-bounce btn-outline outline border-gray-100 text-gray-100 lg:btn-lg">
             BOOK AN EVENT
           </button>
         </div>
