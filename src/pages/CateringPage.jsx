@@ -16,7 +16,7 @@ const CateringPage = () => {
           zIndex: "-1",
           marginTop: "-88px",
         }}>
-        <div className="container mx-auto">
+        <div className="container mx-auto py-16">
           <CateringSwiperCarousel />
           <CateringMenu />
         </div>

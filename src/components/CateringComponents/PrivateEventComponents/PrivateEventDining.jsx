@@ -3,7 +3,7 @@ import React from "react";
 const PrivateEventDining = () => {
   return (
     <>
-      <section className="py-12">
+      <section className="pb-20 pt-12">
         <h1 className="text-7xl text-center text-gray-100 pt-20">
           Private Event
         </h1>

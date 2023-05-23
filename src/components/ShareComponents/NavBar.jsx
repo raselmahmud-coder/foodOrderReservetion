@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/ASF_logo.png";
 
 const NavBar = () => {
-  const [clicked, setClicked] = useState(false);
-  const [hideMenu, setHideMenu] = useState(false);
+  const [isClicked, setClicked] = useState(false);
+
   const commonLi = (
     <>
       <li>
@@ -61,23 +61,32 @@ const NavBar = () => {
     </>
   );
   return (
-    <>
+    <section className="container mx-auto">
       <nav className="navbar py-5" id="backToTop">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-primary lg:hidden">
-              {clicked ? (
-                <label
-                  onClick={() => {
-                    setClicked(!clicked);
-                    setHideMenu(!hideMenu);
-                  }}
-                  className="btn btn-sm btn-circle">
-                  ✕
-                </label>
+        <div className="lg:navbar-start flex justify-around w-full">
+          <div
+            style={{ display: "block", width: "100%" }}
+            className="dropdown dropdown-open">
+            <label
+              onClick={() => setClicked(!isClicked)}
+              tabIndex={0}
+              className="btn btn-primary lg:hidden">
+              {isClicked ? (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               ) : (
                 <svg
-                  onClick={() => setClicked(!clicked)}
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   fill="none"
@@ -93,16 +102,17 @@ const NavBar = () => {
               )}
             </label>
             <ul
+              style={{ width: "150%" }}
               tabIndex={0}
               className={`${
-                hideMenu ? "hidden " : undefined
-              } menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-64`}>
+                !isClicked ? "hidden " : undefined
+              } menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box`}>
               {/* this menu for mobile */}
               {commonLi}
             </ul>
           </div>
-          <Link to="/">
-            <img src={logo} alt="" className="h-10 hidden lg:block" />
+          <Link to="/" className="block lg:hidden">
+            <img src={logo} alt="" className="h-10" />
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
@@ -110,13 +120,13 @@ const NavBar = () => {
             {commonLi}
           </ul>
         </div>
-        <div className="navbar-end lg:hidden">
+        {/*  <div className="navbar-end lg:hidden">
           <Link to="/">
             <img src={logo} alt="" className="h-10" />
           </Link>
-        </div>
+        </div> */}
       </nav>
-    </>
+    </section>
   );
 };
 

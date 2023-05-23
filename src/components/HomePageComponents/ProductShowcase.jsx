@@ -8,7 +8,7 @@ const ProductShowcase = () => {
         className="lg:text-6xl text-4xl text-center my-10 text-gray-100">
         Wish you were here
       </h2>
-      <h1 className="lg:text-7xl text-4xl p-2 max-w-4xl mx-auto text-center text-gray-100">
+      <h1 className="lg:text-5xl text-3xl p-2 max-w-4xl mx-auto text-center text-gray-100">
         Join us at African Soul Food for an unforgettable journey to the middle
         east.
       </h1>
