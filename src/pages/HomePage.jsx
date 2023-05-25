@@ -5,6 +5,7 @@ import MakeReservation from "../components/HomePageComponents/MakeReservation";
 import CallToAction from "../components/HomePageComponents/CallToAction";
 import bgPattern from "../assets/Pattern.png";
 import usePageTitle from "../Hooks/usePageTitle";
+import { Slide } from "react-reveal";
 
 const HomePage = () => {
   usePageTitle("Home Page");
@@ -18,7 +19,9 @@ const HomePage = () => {
           marginTop: "-88px",
         }}>
         <section className="container mx-auto py-32">
-          <SwiperCarousel />
+          <Slide right duration={1500}>
+            <SwiperCarousel />
+          </Slide>
           <ProductShowcase />
           <MakeReservation />
           <CallToAction />

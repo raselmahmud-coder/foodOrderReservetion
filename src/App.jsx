@@ -10,6 +10,7 @@ import EvenCoOrdinatorPage from "./pages/EvenCoOrdinatorPage";
 import CateringPage from "./pages/CateringPage";
 import PrivateEventPage from "./pages/PrivateEventPage";
 import AboutPage from "./pages/AboutPage";
+import { Element } from "react-scroll";
 
 function App() {
   const WrappedHomePage = CustomSpinner(HomePage);
@@ -23,11 +24,46 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<WrappedHomePage />} />
-        <Route path="/careers" element={<WrappedEvenCoOrdinatorPage />} />
-        <Route path="/catering" element={<WrappedCateringPage />} />
-        <Route path="/private-dining" element={<WrappedPrivateEventPage />} />
-        <Route path="/about" element={< WrappedAboutPage/>} />
+        <Route
+          path="/"
+          element={
+            <Element name="homeScroll">
+              <WrappedHomePage />
+            </Element>
+          }
+        />
+        <Route
+          path="/careers"
+          element={
+            <Element name="careersScroll">
+              <WrappedEvenCoOrdinatorPage />
+            </Element>
+          }
+        />
+        <Route
+          path="/catering"
+          element={
+            <Element name="cateringScroll">
+              <WrappedCateringPage />
+            </Element>
+          }
+        />
+        <Route
+          path="/private-dining"
+          element={
+            <Element name="privateDiningScroll">
+              <WrappedPrivateEventPage />
+            </Element>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Element name="aboutScroll">
+              <WrappedAboutPage />
+            </Element>
+          }
+        />
         {/* Error Page */}
         <Route path="*" element={<WrappedAErrorPage />} />
       </Routes>

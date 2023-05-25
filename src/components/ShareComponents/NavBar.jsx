@@ -1,72 +1,88 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/ASF_logo.png";
-
+import greenBg from "../../assets/green_screen.png";
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
 
   const commonLi = (
     <>
-      <li>
+      <li className="hover:animate-bounce lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/"}>
           Home
         </NavLink>
       </li>
-
-      <li>
+      <li className="hover:animate-bounce lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/catering"}>
           Catering
         </NavLink>
       </li>
-      <li>
+      <li className="hover:animate-bounce lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/private-dining">
           Private Dining
         </NavLink>
       </li>
-      <li>
+      <li className="hover:animate-bounce lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/careers">
           Careers
         </NavLink>
       </li>
-      <li>
+      <li className="hover:animate-bounce lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/about">
           About
         </NavLink>
       </li>
-      <li>
-        <button className="btn hover:animate-bounce btn-primary active:text-gray-100">
+      <li className="hover:animate-bounce lg:py-0 py-3">
+        <button className="btn hover:animate-bounce lg:py-0 py-3 btn-primary active:text-gray-100">
           View Menu
         </button>
       </li>
     </>
   );
   return (
-    <section className="container mx-auto">
-      <nav className="navbar py-5" id="backToTop">
-        <div className="lg:navbar-start flex justify-around w-full">
+    <>
+      <section className="container mx-auto relative">
+        <nav className="flex justify-between  py-5" id="backToTop">
+          <div>
+            <Link to="/">
+              <img src={logo} className="h-10" />
+            </Link>
+          </div>
+          {/* Mobile menu here start*/}
           <div
-            style={{ display: "block", width: "100%" }}
-            className="dropdown dropdown-open">
+            // style={{ display: "block", width: "100%" }}
+            className=" lg:hidden block">
+            {/* Hamburger Icon */}
             <label
               onClick={() => setClicked(!isClicked)}
               tabIndex={0}
@@ -102,31 +118,33 @@ const NavBar = () => {
               )}
             </label>
             <ul
-              style={{ width: "150%" }}
+              style={{
+                backgroundImage: `url(${greenBg})`,
+                width: "100%",
+                zIndex: "1",
+              }}
               tabIndex={0}
               className={`${
-                !isClicked ? "hidden " : undefined
-              } menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box`}>
+                !isClicked ? "hidden " : "text-gray-100"
+              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}>
               {/* this menu for mobile */}
               {commonLi}
             </ul>
           </div>
-          <Link to="/" className="block lg:hidden">
-            <img src={logo} alt="" className="h-10" />
-          </Link>
-        </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-secondary">
-            {commonLi}
-          </ul>
-        </div>
-        {/*  <div className="navbar-end lg:hidden">
-          <Link to="/">
-            <img src={logo} alt="" className="h-10" />
-          </Link>
-        </div> */}
-      </nav>
-    </section>
+
+          {/* Mobile menu here End*/}
+
+          {/* Desktop menu here start*/}
+          <div className="hidden lg:block">
+            <ul className="flex gap-8 justify-center items-center text-xl px-1 text-secondary">
+              {commonLi}
+            </ul>
+          </div>
+
+          {/* Desktop menu here End*/}
+        </nav>
+      </section>
+    </>
   );
 };
 

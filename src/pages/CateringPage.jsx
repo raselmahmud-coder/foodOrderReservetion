@@ -3,6 +3,7 @@ import CateringSwiperCarousel from "../components/CateringComponents/CateringCar
 import Pattern from "../assets/Pattern.png";
 import CateringMenu from "../components/CateringComponents/CateringMenu";
 import usePageTitle from "../Hooks/usePageTitle";
+import { Slide } from "react-reveal";
 
 const CateringPage = () => {
   usePageTitle("Catering Page");
@@ -17,7 +18,9 @@ const CateringPage = () => {
           marginTop: "-88px",
         }}>
         <div className="container mx-auto py-16">
-          <CateringSwiperCarousel />
+          <Slide right duration={1500}>
+            <CateringSwiperCarousel />
+          </Slide>
           <CateringMenu />
         </div>
       </section>
